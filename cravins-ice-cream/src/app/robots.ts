@@ -1,0 +1,1 @@
+import type{MetadataRoute}from"next";export default function robots():MetadataRoute.Robots{const url=process.env.NEXT_PUBLIC_SITE_URL||"http://localhost:3000";const prod=process.env.NODE_ENV==="production";return{rules:{userAgent:"*",allow:prod?"/":[],disallow:prod?undefined:"/"},sitemap:prod?`${url}/sitemap.xml`:undefined}}
